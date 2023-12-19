@@ -11,7 +11,7 @@ class ObjectDetector:
        
         self.capture_index = capture_index
         
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         print("Using Device: ", self.device)
         
         self.model = self.load_model()
@@ -44,26 +44,26 @@ class ObjectDetector:
             boxes = result.boxes.cpu().numpy()
             count = 0
 
-            #Optional for display
+            #Comment out print statements for extra information
             for i in range(len(boxes.conf)):
 
                 if boxes.conf[i] > 0.8:     #object confidence > 80%
 
                     count+=1
 
-                    print("\nObject ",count," : ")
+                    #print("\nObject ",count," : ")
 
                     class_id = int(boxes.cls[i])
-                    print("class id :",class_id)
+                    #print("class id :",class_id)
 
                     object = self.CLASS_NAMES_DICT[class_id]        #Refer coco.names for objects
-                    print("object : ",object)
+                    #print("object : ",object)
 
                     conf = boxes.conf[i]
-                    print("confidence :",conf)
+                    #print("confidence :",conf)
 
                     xyxy = boxes.xyxy[i]
-                    print("xyxyx : ",xyxy)
+                    #print("xyxyx : ",xyxy)
 
                     #tracker_id = None
 
@@ -74,9 +74,9 @@ class ObjectDetector:
                         confidences.append(result.boxes.conf[i].cpu().numpy())
                         class_ids.append(result.boxes.cls[i].cpu().numpy().astype(int))
             
-            print("Total objects detected = ",count)
+            #print("Total objects detected = ",count)
 
-            print("-----------------------------------------------------------------------------") #time loop
+            #print("-----------------------------------------------------------------------------") #time loop
 
         # Setup detections for visualization
         
