@@ -15,6 +15,7 @@ The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects fro
 - Python (version 3.10.13)
 - To install necessary dependencies, execute:
   ```bash
+
   pip install -r requirements.txt
 - The coco.names file contains labels for 80 objects used in the YOLOv8 model.
 

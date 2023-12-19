@@ -102,24 +102,24 @@ class ObjectDetector:
     
     def __call__(self):
 
-        cap = cv2.VideoCapture(self.capture_index)
-        #assert cap.isOpened()
+        cap = cv2.VideoCapture(self.capture_index)          #video input
+        assert cap.isOpened()
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
         succesfull = 1
         while succesfull:
           
-            start_time = time()
+            start_time = time()             #To calculate fps
             
             succesfull, frame = cap.read() #1st -if succesfull, frame gives a small frame(height same,width small) of image
             assert succesfull              #check by cv2.imshow(frame)
             
             frame = cv2.resize(frame, (1280, 720)) #resize frame (x-axis,y-axis), comment out for original size
 
-            results = self.predict(frame)
+            results = self.predict(frame)   # DNN model runs and ultralytics.engine.results.Boxes object is retuned in list
 
-            framee = self.plot_bboxes(results, frame)
+            framee = self.plot_bboxes(results, frame)   #plots boundary boxes around detected objects
             
             end_time = time()
             fps = 1/np.round(end_time - start_time, 2)
