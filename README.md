@@ -1,13 +1,12 @@
-# yolov8 Object Detector
+# Yolo v8 Object Detector
 
 This Python project implements real-time object detection using Ultralytics' YOLOv8 pretrained model. The detector identifies various objects in video streams or files, displaying labels and bounding boxes dynamically.
 
 ## Overview
 
-This project is divided into two parts, 'img_obj-det.py' to detect objects from an image and 'vid_obj-det.py' to
-detect objects from an video input or webcam setup.
+This project comprises two components: `img_obj-det.py` designed for detecting objects within images, and `vid_obj-det.py` tailored for detecting objects from either video inputs or webcam setups.
 
-The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects from the COCO dataset. It offers the ability to:
+The detector leverages a YOLOv8 Medium `yolov8m` model trained on 80 objects from the COCO dataset. It offers the ability to:
 
 - Perform real-time object detection using webcams, connected cameras, video files, or streaming IP links.
 - Display bounding boxes and labels for detected objects with their confidence levels.
@@ -15,12 +14,13 @@ The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects fro
 
 ## Requirements
 
-- Python (version 3.10.13)
-- To install necessary dependencies, execute:
-  ```bash
+- Python (version *3.10.13*)
+- To install necessary python libraries, execute:
 
+  ```bash
   pip install -r requirements.txt
-- The coco.names file contains labels for 80 objects used in the YOLOv8 model.
+- GPU is optional
+- Enviorment like IDE/Text Editor etc. to run the Python file.
 
 ## Usage
 
@@ -29,16 +29,30 @@ The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects fro
 - Confirm Python 3.10.13 is installed on your device.
 - Install dependencies using `pip install -r requirements.txt`.
 - The `coco.names` file contains labels for 80 objects used in the YOLOv8 model.
+- `static/` contains sample files and `requirements.txt`.
 
-### Running the Detector
+### Running the Object Detector
 
-- Choose any one python file as per your requirment (image or video)
-- Initialize the `ObjectDetector` class, providing:
-  - A capture index (0 for webcam)
-  - Video file path / image path
-  - Streaming IP link
-- Run the code to activate the object detection system.
-- Press 'q' to exit the detection window. / Close the window for image file
+- **For Image Detection (`img_obj-det.py`):**
+  1. Initialize the `ObjectDetector` class, providing:
+     - Image file path
+     - Image link
+  2. Run the code to activate the object detection system by :
+      - By pressing the run button on your envoirment or
+        ```bash
+        python img_obj-det.py
+  3. Close the window to exit the detection.
+
+- **For Video and Webcam Detection (`vid_obj-det.py`):**
+  1. Initialize the `ObjectDetector` class, providing:
+     - Video file path
+     - Video link
+     - Index number (0 for default webcam on your device)
+  2. Run the code to activate the object detection system by :
+      - By pressing the run button on your envoirment or
+        ```bash
+        python vid_obj-det.py
+  3. Press **`q`** to exit the detection.
 
 ### Instructions
 
@@ -49,3 +63,7 @@ The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects fro
 - Feel free to explore the code and adapt it for various object detection tasks!
 
 Enjoy detecting! 🕵️‍♂️🎥
+
+### References
+
+- Ultralytics yolov8 documentation : https://docs.ultralytics.com/
