@@ -1,6 +1,6 @@
 # Yolo v8 Object Detector
 
-This Python project implements real-time object detection using Ultralytics' YOLOv8 pretrained model. The detector identifies various objects in images or videos, displaying labels and bounding boxes dynamically.
+Experience real-time object detection at its finest with this Python project utilizing Ultralytics' cutting-edge YOLOv8 pretrained model. Seamlessly identifying diverse objects within images or videos, it dynamically showcases labels and bounding boxes, bringing precision and efficiency to object recognition.
 
 ## Overview
 
