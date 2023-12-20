@@ -12,6 +12,15 @@ The detector leverages a YOLOv8 Medium `yolov8m` model trained on 80 objects fro
 - Display bounding boxes and labels for detected objects with their confidence levels.
 - Calculate and showcase frames per second (FPS) during detection.
 
+## Screenshots
+
+Image Model
+![image](https://github.com/ombothre/object-detector/assets/92716010/732215d9-722d-47c5-9fdd-8457a9524d24)
+
+Video Model
+
+![image](https://github.com/ombothre/object-detector/assets/92716010/831821de-59ca-4fd6-90b9-e83916c10f1b)
+
 ## Requirements
 
 - Python (version *3.10.13*)
