@@ -4,6 +4,9 @@ This Python project implements real-time object detection using Ultralytics' YOL
 
 ## Overview
 
+This project is divided into two parts, 'img_obj-det.py' to detect objects from an image and 'vid_obj-det.py' to
+detect objects from an video input or webcam setup.
+
 The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects from the COCO dataset. It offers the ability to:
 
 - Perform real-time object detection using webcams, connected cameras, video files, or streaming IP links.
@@ -29,12 +32,13 @@ The detector leverages a YOLOv8 Medium (YOLOv8m) model trained on 80 objects fro
 
 ### Running the Detector
 
+- Choose any one python file as per your requirment (image or video)
 - Initialize the `ObjectDetector` class, providing:
   - A capture index (0 for webcam)
-  - Video file path
+  - Video file path / image path
   - Streaming IP link
 - Run the code to activate the object detection system.
-- Press 'q' to exit the detection window.
+- Press 'q' to exit the detection window. / Close the window for image file
 
 ### Instructions
 
