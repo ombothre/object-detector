@@ -14,10 +14,11 @@ The detector leverages a YOLOv8 Medium `yolov8m` model trained on 80 objects fro
 
 ## Screenshots
 
-Image Model
+### Image Model
+
 ![image](https://github.com/ombothre/object-detector/assets/92716010/732215d9-722d-47c5-9fdd-8457a9524d24)
 
-Video Model
+### Video Model
 
 ![image](https://github.com/ombothre/object-detector/assets/92716010/831821de-59ca-4fd6-90b9-e83916c10f1b)
 
